@@ -11,6 +11,9 @@ MITHORIUM_INCLUDE_CRYPTO_FDE := true
 endif
 MITHORIUM_LEGACY_CRYPTO := true
 
+# Fstab
+MITHORIUM_USES_DEVICE_SPECIFIC_FSTAB := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 
