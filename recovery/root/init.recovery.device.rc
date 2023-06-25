@@ -14,9 +14,10 @@ on property:adsp.boot=1 && property:audio.enable=*
 on property:adsp.boot=1 && property:audio.volume=*
     exec u:r:recovery:s0 -- /system/bin/tinymix "RX1 Digital Volume" ${audio.volume}
     exec u:r:recovery:s0 -- /system/bin/tinymix "RX2 Digital Volume" ${audio.volume}
+    exec u:r:recovery:s0 -- /system/bin/tinymix "RX3 Digital Volume" ${audio.volume}
 
 on boot
-    setprop audio.volume 64
+    setprop audio.volume 72
 
 # Determine device
 on init
