@@ -4,10 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_RELEASE_NAME := moto8937
+PRODUCT_RELEASE_NAME := moto8937_o_4_19
+
+# Crypto
+MITHORIUM_KEYMASTER_VERSION := 3.0
 
 # Kernel
-TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_VERSION := 4.19
 
 # Inherit from moto8937 device
 $(call inherit-product, device/motorola/moto8937/device.mk)
@@ -17,6 +20,6 @@ PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 BOARD_VENDOR := Motorola
 PRODUCT_BRAND := Motorola
-PRODUCT_MODEL := MSM8937
+PRODUCT_MODEL := MSM8937 Oreo
 PRODUCT_MANUFACTURER := Motorola
 TARGET_VENDOR := Motorola
