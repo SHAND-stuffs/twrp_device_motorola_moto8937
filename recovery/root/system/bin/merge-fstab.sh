@@ -32,3 +32,8 @@ else
         umount /data || true
     fi
 fi
+
+# Vendor partition
+if ! readlink /dev/block/bootdevice/by-name/vendor | grep -F "/dev/block/mmcblk" > /dev/null ; then
+	sed -i '/super_vendor/d' /system/etc/twrp.flags
+fi

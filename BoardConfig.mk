@@ -20,7 +20,7 @@ endif
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
 
-# Partitions - dynamic
+# Partitions - dynamic (Not accurate for all devices)
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := oem system vendor
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 BOARD_SUPER_PARTITION_OEM_DEVICE_SIZE := 1711276032
