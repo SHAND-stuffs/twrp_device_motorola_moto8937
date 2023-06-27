@@ -11,11 +11,7 @@ DEVICE_PATH := device/motorola/moto8937
 USES_DEVICE_MOTOROLA_MOTO8937 := true
 
 # Kernel
-ifeq ($(TARGET_KERNEL_VERSION),4.19)
-TARGET_PREBUILT_KERNEL := device/motorola/kernel-motothorium/moto8937_4_19/Image.gz-dtb
-else
-TARGET_PREBUILT_KERNEL := device/motorola/kernel-motothorium/moto8937/Image.gz-dtb
-endif
+TARGET_PREBUILT_KERNEL := device/motorola/kernel-motothorium/$(PRODUCT_RELEASE_NAME)/Image.gz-dtb
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
