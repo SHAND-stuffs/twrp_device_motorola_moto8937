@@ -11,7 +11,12 @@ DEVICE_PATH := device/motorola/moto8937
 USES_DEVICE_MOTOROLA_MOTO8937 := true
 
 # Kernel
+ifneq ($(wildcard device/motorola/kernel-motothorium/$(PRODUCT_RELEASE_NAME)/Image.gz-dtb),)
 TARGET_PREBUILT_KERNEL := device/motorola/kernel-motothorium/$(PRODUCT_RELEASE_NAME)/Image.gz-dtb
+else
+BOARD_MKBOOTIMG_ARGS += --dt device/motorola/kernel-motothorium/$(PRODUCT_RELEASE_NAME)/dt.img
+TARGET_PREBUILT_KERNEL := device/motorola/kernel-motothorium/$(PRODUCT_RELEASE_NAME)/Image.gz
+endif
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
