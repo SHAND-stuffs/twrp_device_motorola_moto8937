@@ -7,11 +7,10 @@
 PRODUCT_RELEASE_NAME := moto8937_n
 
 # Crypto
-MITHORIUM_INCLUDE_CRYPTO_FDE := true
 MITHORIUM_LEGACY_CRYPTO := true
 
 # Kernel
-TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_VERSION := 4.19
 
 # Inherit from moto8937 device
 $(call inherit-product, device/motorola/moto8937/device.mk)
